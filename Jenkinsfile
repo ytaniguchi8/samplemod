@@ -3,8 +3,6 @@
 def repo_name = 'samplemod'
 def git_url = 'https://github.com/t-hsgw/${repo_name}.git'
 
-
-
 pipeline {
     agent {
         docker {
