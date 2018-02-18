@@ -16,6 +16,7 @@ pipeline {
         stage('get source'){
             steps {
                 checkout scm
+                sh 'git branch'
                 sh 'ls -al'
             }
         }
