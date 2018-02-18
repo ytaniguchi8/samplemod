@@ -13,7 +13,7 @@ pipeline {
         }
     }
     stages {
-        stage('get source') {
+        stage('get source'){
             checkout scm
             sh 'ls -al'
         }
