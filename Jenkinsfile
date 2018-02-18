@@ -13,17 +13,6 @@ pipeline {
         }
     }
     stages {
-        stage('misc process'){
-            steps {
-                sh 'id'
-                sh 'hostname'
-                sh 'pwd'
-                sh 'ls -al'
-                sh 'cat .pypirc'
-                sh 'cd /'
-                sh 'ls'
-            }
-        }
         stage('docker setup') {
             steps {
                 sh 'pip install --upgrade pip'
