@@ -1,3 +1,2 @@
 nose
 sphinx
-ukeru=1.2
