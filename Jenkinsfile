@@ -1,5 +1,8 @@
 #!groovy
 
+def repo_name = 'samplemod'
+def git_url = 'https://github.com/t-hsgw/${repo_name}.git'
+
 pipeline {
     agent {
         docker {
@@ -8,6 +11,9 @@ pipeline {
         }
     }
     stages {
+        stage('get source') {
+            checkout scm
+        }
         stage('id'){
             steps {
                 sh 'id'
@@ -26,6 +32,7 @@ pipeline {
                 sh 'pip install -r requirements.txt'
                 sh 'python -V'
             }
+        }
         stage('test'){
             steps {
                 sh 'python setup.py test'
