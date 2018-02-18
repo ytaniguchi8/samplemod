@@ -28,7 +28,6 @@ pipeline {
         }
         stage('upload'){
             steps {
-                sh 'python setup.py upload --help'
                 sh 'python setup.py sdist'
                 sh 'twine upload --config-file .pypirc --repository internal --skip-existing dist/*'
             }
