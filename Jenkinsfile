@@ -9,7 +9,7 @@ pipeline {
     agent {
         docker {
             image 'python:3.5.1'
-            args '-u root -v /var/lib/jenkins/.pypirc:/var/lib/jenkins/workspace/sample_pipeline/.pypirc'
+            args '-u root -v /home/thasegawa/.pypirc:/var/lib/jenkins/workspace/sample_pipeline/.pypirc'
         }
     }
     stages {
