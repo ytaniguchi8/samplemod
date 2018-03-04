@@ -19,7 +19,6 @@ pipeline {
                 sh 'hostname'
                 sh 'pwd'
                 sh 'ls -al'
-                sh 'cat .pypirc'
                 sh 'cd /'
                 sh 'ls'
             }
