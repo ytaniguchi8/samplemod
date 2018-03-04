@@ -37,7 +37,7 @@ pipeline {
                 sh 'python setup.py test'
                 sh 'python setup.py upload --help'
                 sh 'python setup.py sdist'
-                sh 'twine upload --config-file .pypirc --repository internal --skip-existing dist/*'
+                sh 'twine upload --config-file /home/thasegawa/.pypirc --repository internal --skip-existing dist/*'
             }
         }
     }
