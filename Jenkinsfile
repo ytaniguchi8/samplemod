@@ -14,7 +14,7 @@ pipeline {
     }
     stages {
         stage('get source') {
-            checkout scm
+            # checkout scm
             sh 'ls -al'
         }
         stage('id'){
